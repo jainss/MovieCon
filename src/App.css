@@ -1,7 +1,9 @@
-/* * {
+* {
   scroll-behavior: smooth;
 }
-
+.navbar {
+  position: fixed;
+}
 .app {
   min-height: 100vh;
   background-color: #39445a;
@@ -31,4 +33,4 @@
   .pageTitle {
     font-size: 6.4vw;
   }
-} */
+}

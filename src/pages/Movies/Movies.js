@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from "axios";
 import Genres from '../../components/Genres';
+import './Movies.css'
 import { useEffect, useState } from "react";
 import useGenre from "../../Hooks/useGenre";
 import CustomPagination from "../../components/Pagination/CustomPagination";
@@ -15,7 +16,7 @@ const Movies = () => {
     const [page, setPage] = useState(1);
     const fetchMovies = async () => {
         const { data } = await axios.get(
-            `https://api.themoviedb.org/3/discover/movie?api_key=d13ab1839aef4d20bc565147ca6b05a7&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`
+            `https://api.themoviedb.org/3/discover/movie?api_key=d13ab1839aef4d20bc565147ca6b05a7&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforURL}`
         );
         setNumOfPages(data.total_pages);
         console.log(data);
@@ -29,7 +30,7 @@ const Movies = () => {
     }, [genreforURL, page]);
     return (
         <div className="container">
-            <span className="pageTitle"> Today's Trending </span>
+            <span className="pageTitle"> Best Movies </span>
             <Genres
                 type="movie"
                 selectedGenres={selectedGenres}

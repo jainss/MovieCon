@@ -1,17 +1,14 @@
 .trending {
   display: flex;
-  flex: 1 0 auto;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 .singlecard {
-  display: flex;
-
   margin-left: 2rem;
   margin-right: 2rem;
 }
 .pageTitle {
-  justify-content: center;
+  text-align: center;
   font-weight: bold;
   font-size: 40px;
   color: rgb(248, 16, 16);
