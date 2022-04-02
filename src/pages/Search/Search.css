@@ -1,0 +1,9 @@
+.search {
+  justify-content: center;
+  width: 60rem;
+  display: flex;
+  border-radius: 15px;
+  margin: 50px;
+  border: 5px solid rgb(22, 18, 6);
+  background-color: rgb(64, 66, 66);
+}

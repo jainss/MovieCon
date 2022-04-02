@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { Component } from 'react';
+import React, { } from 'react';
 import { useEffect, useState } from "react";
 import Genres from "../../components/Genres";
 import CustomPagination from "../../components/Pagination/CustomPagination";

@@ -9,9 +9,10 @@ import {
 
 import Movies from './pages/Movies/Movies';
 import TvSeries from './pages/TvSeries/TvSeries';
-import TopIMDB from './pages/TopIMDB/TopIMDB';
+import Search from './pages/Search/Search';
 import Home from './pages/Home/Home';
 import WatchList from './pages/WatchList/WatchList';
+// import { Search } from '@material-ui/icons';
 
 
 const App = () => {
@@ -29,8 +30,8 @@ const App = () => {
           <Route path="/TvSeries" exact>
             <TvSeries />
           </Route>
-          <Route path="/TopIMDB" exact>
-            <TopIMDB />
+          <Route path="/Search" exact>
+            <Search />
           </Route>
           <Route path="/WatchList" exact>
             <WatchList />

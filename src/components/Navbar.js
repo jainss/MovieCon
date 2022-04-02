@@ -97,10 +97,10 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/TopIMDB" exact>
+                            <NavLink className="nav-link" to="/Search" exact>
                                 <i
                                     className="far fa-copy">
-                                </i>Top IMDB
+                                </i>Search
                             </NavLink>
                         </li>
                         <li className="nav-item">
