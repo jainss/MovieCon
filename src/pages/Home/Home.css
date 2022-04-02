@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.singlecard {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 .pageTitle {
   text-align: center;
   font-weight: bold;

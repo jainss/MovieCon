@@ -27,6 +27,7 @@ const Home = () => {
             <span className="pageTitle"> Today's Trending </span>
             <div className='trending'>
                 {content && content.map((c) => (<SingleContent
+
                     key={c.id}
                     id={c.id}
                     poster={c.poster_path}

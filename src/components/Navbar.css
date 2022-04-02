@@ -5,16 +5,21 @@ body {
   background: #fff; /* fallback for old browsers */
 }
 * {
-  font-size: 20px;
   margin: 0;
   padding: 0;
 }
 i {
   margin-right: 10px;
 }
+/* .nav {
+  position: fixed;
+} */
 
+.navbar {
+  background: transparent;
+}
 .navbar-logo {
-  padding: 13px;
+  padding: 15px;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
   color: rgb(248, 16, 16);
@@ -43,7 +48,7 @@ i {
 #navbarSupportedContent ul li a {
   color: rgb(248, 13, 13);
   text-decoration: none;
-  font-size: 23px;
+  font-size: 15px;
   font-family: "Times New Roman", Times, serif;
   display: block;
   padding: 20px 20px;
@@ -51,9 +56,7 @@ i {
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   position: relative;
 }
-/* #navbarSupportedContent ul li a :hover {
-  font-weight: bold;
-} */
+
 #navbarSupportedContent > ul > li.active > a {
   color: hsl(194, 96%, 51%);
   background-color: transparent;

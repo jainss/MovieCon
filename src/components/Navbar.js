@@ -35,7 +35,6 @@ const Navbar = () => {
             });
         });
     }
-
     useEffect(() => {
 
         animation();
@@ -45,73 +44,76 @@ const Navbar = () => {
 
     }, []);
 
+
     // Animation Parts Ended Here 
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-mainbg">
+        <>
+            <nav className="navbar navbar-expand-lg navbar-mainbg ">
 
-            <NavLink className="navbar-brand navbar-logo" to="/" exact onClick={() => window.scroll(0, 0)}>
-                Movie Hub
-            </NavLink>
+                <NavLink className="navbar-brand navbar-logo" to="/" exact onClick={() => window.scroll(0, 0)}>
+                    Movie Hub
+                </NavLink>
 
 
-            <button
-                className="navbar-toggler"
-                onClick={function () {
-                    setTimeout(function () { animation(); });
-                }}
-                type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i className="fas fa-bars text-white"></i>
-            </button>
+                <button
+                    className="navbar-toggler"
+                    onClick={function () {
+                        setTimeout(function () { animation(); });
+                    }}
+                    type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i className="fas fa-bars text-white"></i>
+                </button>
 
-            <div
-                className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav ms-auto ">
+                <div
+                    className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav ms-auto ">
 
-                    <div className="hori-selector">
-                        <div className="left"></div>
-                        <div className="right"></div>
-                    </div>
+                        <div className="hori-selector">
+                            <div className="left"></div>
+                            <div className="right"></div>
+                        </div>
 
-                    <li className="nav-item active">
-                        <NavLink className="nav-link" to="/" exact>
-                            <i
-                                className="fas fa-tachometer-alt">
-                            </i>Home
-                        </NavLink>
-                    </li>
+                        <li className="nav-item active">
+                            <NavLink className="nav-link" to="/" exact>
+                                <i
+                                    className="fas fa-tachometer-alt">
+                                </i>Home
+                            </NavLink>
+                        </li>
 
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to="/Movies" exact>
-                            <i
-                                className="far fa-address-book">
-                            </i>Movies
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to="/TvSeries" exact>
-                            <i
-                                className="far fa-address-book">
-                            </i>TV Series
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to="/TopIMDB" exact>
-                            <i
-                                className="far fa-copy">
-                            </i>Top IMDB
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to="/WatchList" exact>
-                            <i
-                                className="far fa-copy">
-                            </i>WatchList
-                        </NavLink>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/Movies" exact>
+                                <i
+                                    className="far fa-address-book">
+                                </i>Movies
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/TvSeries" exact>
+                                <i
+                                    className="far fa-address-book">
+                                </i>TV Series
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/TopIMDB" exact>
+                                <i
+                                    className="far fa-copy">
+                                </i>Top IMDB
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/WatchList" exact>
+                                <i
+                                    className="far fa-copy">
+                                </i>WatchList
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </>
     )
 }
 export default Navbar;
