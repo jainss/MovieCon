@@ -24,7 +24,7 @@ const Home = () => {
 
     return (
         <div>
-            <span className="pageTitle"> Today's Trending</span>
+            <span className="pageTitle"> Today's Trending </span>
             <div className='trending'>
                 {content && content.map((c) => (<SingleContent
                     key={c.id}
