@@ -33,8 +33,7 @@ const Search = () => {
     const fetchSearch = async () => {
         try {
             const { data } = await axios.get(
-                `https://api.themoviedb.org/3/search/${type ? "tv" : "movie"}?api_key=${process.env.REACT_APP_API_KEY
-                }&language=en-US&query=${searchText}&page=${page}&include_adult=false`
+                `https://api.themoviedb.org/3/search/${type ? "tv" : "movie"}?api_key=d13ab1839aef4d20bc565147ca6b05a7&language=en-US&query=${searchText}&page=${page}&include_adult=false`
             );
             setContent(data.results);
             setNumOfPages(data.total_pages);
@@ -80,8 +79,8 @@ const Search = () => {
                     style={{ paddingBottom: 5 }}
                     aria-label="disabled tabs example"
                 >
-                    <Tab style={{ fontSize: '14px', width: "50%", color: "black", fontWeight: "bold" }} label="Search Movies" />
-                    <Tab style={{ fontSize: '14px', width: "50%", color: "black", fontWeight: "bold" }} label="Search TV Series" />
+                    <Tab style={{ fontSize: '14px', width: "50%", color: "White", fontWeight: "bold" }} label="Search Movies" />
+                    <Tab style={{ fontSize: '14px', width: "50%", color: "White", fontWeight: "bold" }} label="Search TV Series" />
                 </Tabs>
             </ThemeProvider>
             <div className="trending">

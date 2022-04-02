@@ -52,7 +52,7 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-lg navbar-mainbg ">
 
                 <NavLink className="navbar-brand navbar-logo" to="/" exact onClick={() => window.scroll(0, 0)}>
-                    Movie Hub
+                    MovieCon
                 </NavLink>
 
 
@@ -78,7 +78,7 @@ const Navbar = () => {
                             <NavLink className="nav-link" to="/" exact>
                                 <i
                                     className="fas fa-tachometer-alt">
-                                </i>Home
+                                </i>Trending
                             </NavLink>
                         </li>
 

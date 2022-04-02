@@ -6,6 +6,7 @@ import { ThemeProvider } from '@material-ui/core';
 const darkTheme = createMuiTheme({
     palette: {
         type: "dark",
+        // color: "white"
     },
 });
 const CustomPagination = ({ setPage, noofpages = 100 }) => {
@@ -19,6 +20,7 @@ const CustomPagination = ({ setPage, noofpages = 100 }) => {
                 width: "100%",
                 display: "flex",
                 justifyContent: "center",
+                // color: "white",
                 marginTop: 30,
                 marginBottom: 30
             }}>
