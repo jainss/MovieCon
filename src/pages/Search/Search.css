@@ -7,3 +7,8 @@
   border: 5px solid rgb(22, 18, 6);
   background-color: rgb(64, 66, 66);
 }
+.Nofound{
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}

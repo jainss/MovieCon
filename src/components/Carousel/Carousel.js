@@ -2,15 +2,16 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+// import { Carousel } from "react-bootstrap";
 import { img_300, noPicture } from "../../config/config";
 import "./Carousel.css";
 
 const handleDragStart = (e) => e.preventDefault();
 
-const Gallery = ({ id, media_type }) => {
+const Carousel = ({ id, media_type }) => {
     const [credits, setCredits] = useState([]);
 
-    const items = credits.map((c) => (
+    const items = credits?.map((c) => (
         <div className="carouselItem">
             <img
                 src={c.profile_path ? `${img_300}/${c.profile_path}` : noPicture}
@@ -59,4 +60,4 @@ const Gallery = ({ id, media_type }) => {
     );
 };
 
-export default Gallery;
+export default Carousel;

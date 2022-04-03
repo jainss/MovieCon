@@ -4,7 +4,9 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import axios from "axios";
-import './ContentModal/ContentModal.css'
+// import Carousel from "react-material-ui-carousel";
+// import '../Carousel/Carousel'
+import './ContentModal.css'
 import {
     img_500,
     unavailable,
@@ -13,7 +15,6 @@ import {
 import "./ContentModal.css";
 import { Button } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
-import Carousel from "../Carousel/Carousel";
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -22,9 +23,9 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
     },
     paper: {
-        width: "90%",
-        height: "80%",
-        backgroundColor: "#39445a",
+        width: "80%",
+        height: "70%",
+        backgroundColor: "#454545 ",
         border: "1px solid #282c34",
         borderRadius: 10,
         color: "white",
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function TransitionsModal({ children, media_type, id }) {
+export default function ContentModal({ children, media_type, id }) {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const [content, setContent] = useState();
@@ -61,8 +62,8 @@ export default function TransitionsModal({ children, media_type, id }) {
             `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=d13ab1839aef4d20bc565147ca6b05a7&language=en-US`
 
         );
-
-        setVideo(data.results[0]?.key);
+        console.log(data);
+        // setVideo(data.results[0]?.key);
     };
 
     useEffect(() => {
@@ -133,14 +134,15 @@ export default function TransitionsModal({ children, media_type, id }) {
                                         {content.overview}
                                     </span>
 
-                                    <div>
+                                    {/* <div>
                                         <Carousel id={id} media_type={media_type} />
-                                    </div>
+                                    </div> */}
 
                                     <Button
                                         variant="contained"
                                         startIcon={<YouTubeIcon />}
-                                        color="secondary"
+                                        color="primary"
+                                        style={{ color: "White", fontWeight: "bold", fontSize: "20px" }}
                                         target="__blank"
                                         href={`https://www.youtube.com/watch?v=${video}`}
                                     >

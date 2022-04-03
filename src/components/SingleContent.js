@@ -13,7 +13,7 @@ const SingleContent = ({
 }) => {
     return (
 
-        <ContentModal>
+        <ContentModal media_type={media_type} id={id}>
             <Badge
                 badgeContent={vote_average}
                 color={vote_average > 6 ? "Primary" : "secondary"}
