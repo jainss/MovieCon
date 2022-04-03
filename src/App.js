@@ -18,8 +18,9 @@ import Particle from './components/Particle';
 const App = () => {
   return (
     <>
+      <Particle />
       <Router>
-
+        {/* <Particle /> */}
         <Navbar />
         <main>
           <Switch>
@@ -35,14 +36,15 @@ const App = () => {
             <Route path="/Search" exact>
               <Search />
             </Route>
-            <Route path="/particle" exact>
+            {/* <Route path="/particle" exact>
               <Particle />
-            </Route>
+            </Route> */}
             <Route path="/WatchList" exact>
               <WatchList />
             </Route>
             {/* <Navigate to="/" /> */}
           </Switch>
+
         </main>
       </Router>
       <Footer />

@@ -61,7 +61,9 @@ export default function ContentModal({ children, media_type, id }) {
             `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=d13ab1839aef4d20bc565147ca6b05a7&language=en-US`
 
         );
-        setVideo(data.results[0].key);
+
+        if (data && data.results[0] && data.results[0].key)
+            setVideo(data.results[0].key);
     };
 
     useEffect(() => {
@@ -135,17 +137,19 @@ export default function ContentModal({ children, media_type, id }) {
                                     {/* <div>
                                         <Carousel id={id} media_type={media_type} />
                                     </div> */}
+                                    {
+                                        video ? (<Button
+                                            variant="contained"
+                                            startIcon={<YouTubeIcon />}
+                                            color="primary"
+                                            style={{ color: "White", fontWeight: "bold", fontSize: "20px" }}
+                                            target="__blank"
+                                            href={`https://www.youtube.com/watch?v=${video}`}
+                                        >
+                                            Watch the Trailer
+                                        </Button>) : null
+                                    }
 
-                                    <Button
-                                        variant="contained"
-                                        startIcon={<YouTubeIcon />}
-                                        color="primary"
-                                        style={{ color: "White", fontWeight: "bold", fontSize: "20px" }}
-                                        target="__blank"
-                                        href={`https://www.youtube.com/watch?v=${video}`}
-                                    >
-                                        Watch the Trailer
-                                    </Button>
                                 </div>
                             </div>
                         </div>
