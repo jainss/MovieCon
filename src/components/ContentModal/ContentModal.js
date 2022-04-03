@@ -4,6 +4,7 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import axios from "axios";
+import './ContentModal/ContentModal.css'
 import {
     img_500,
     unavailable,
@@ -58,6 +59,7 @@ export default function TransitionsModal({ children, media_type, id }) {
     const fetchVideo = async () => {
         const { data } = await axios.get(
             `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=d13ab1839aef4d20bc565147ca6b05a7&language=en-US`
+
         );
 
         setVideo(data.results[0]?.key);
