@@ -13,7 +13,6 @@ const Home = () => {
         const { data } = await axios.get(
             `https://api.themoviedb.org/3/trending/all/week?api_key=d13ab1839aef4d20bc565147ca6b05a7&page=${page}`
         );
-        console.log(data);
         setContent(data.results);
     };
     useEffect(() => {

@@ -52,9 +52,8 @@ export default function ContentModal({ children, media_type, id }) {
         const { data } = await axios.get(
             `https://api.themoviedb.org/3/${media_type}/${id}?api_key=d13ab1839aef4d20bc565147ca6b05a7&language=en-US`
         );
-
+        console.log(data)
         setContent(data);
-        // console.log(data);
     };
 
     const fetchVideo = async () => {
@@ -62,8 +61,7 @@ export default function ContentModal({ children, media_type, id }) {
             `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=d13ab1839aef4d20bc565147ca6b05a7&language=en-US`
 
         );
-        console.log(data);
-        // setVideo(data.results[0]?.key);
+        setVideo(data.results[0].key);
     };
 
     useEffect(() => {

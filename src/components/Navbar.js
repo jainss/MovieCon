@@ -52,7 +52,7 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-lg navbar-mainbg ">
 
                 <NavLink className="navbar-brand navbar-logo" to="/" exact onClick={() => window.scroll(0, 0)}>
-                    MovieCon
+                    MovieCon🍟
                 </NavLink>
 
 
@@ -103,13 +103,13 @@ const Navbar = () => {
                                 </i>Search
                             </NavLink>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <NavLink className="nav-link" to="/WatchList" exact>
                                 <i
                                     className="far fa-copy">
                                 </i>WatchList
                             </NavLink>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </nav>
